@@ -1,0 +1,268 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.raising-container {
+  padding: 2rem;
+  background-color: #fff5e1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin-left: 10%;
+  background: url("/public/images/raisingBackground.png");
+  background-repeat: no-repeat; /* 不重複 */
+  background-size: contain; /* 或者使用 contain 根據需求 */
+  max-height: 100vh;
+  height: 800px;
+}
+.raising-container div.pet-display {
+  margin-left: 10vw;
+}
+.raising-container div.pet-display .pet-image {
+  height: 63vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100vh;
+}
+.raising-container .board-section {
+  background-image: url("/public/images/feeding_StateTable.png");
+  background-repeat: no-repeat; /* 不重複 */
+  background-size: contain; /* 或者使用 contain 根據需求 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 35vw;
+  position: relative;
+}
+.raising-container .board-section .pet-name {
+  display: flex;
+  position: absolute;
+  top: 12%;
+  left: 30%;
+}
+.raising-container .board-section .pet-name h2 {
+  font-size: 2.5rem;
+}
+.raising-container .board-section .pet-name img {
+  width: 2.5vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: ease 0.1s;
+}
+.raising-container .board-section .pet-name img:hover {
+  transform: scale(1.3);
+}
+.raising-container .board-section .numeric {
+  position: absolute;
+  top: 21%;
+  left: 8%;
+  height: 800px;
+  max-height: 100vh;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #333;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.raising-container .board-section .numeric .words {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 300px;
+}
+.raising-container .board-section .numeric .words p {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.raising-container .board-section .numeric .words .level {
+  top: 2%;
+}
+.raising-container .board-section .numeric .words .hunger {
+  top: 12%;
+}
+.raising-container .board-section .numeric .words .cleanliness {
+  top: 25%;
+}
+.raising-container .board-section .numeric .words .emotions {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  top: 37%;
+}
+.raising-container .board-section .numeric .words .emotions .emotion-flex {
+  display: flex;
+  align-items: center;
+}
+.raising-container .board-section .numeric .words .emotions .emotion-flex p {
+  position: static;
+}
+.raising-container .board-section .numeric .words .emotions .emotion-flex .emotion-icon {
+  width: 5vh;
+  height: 5vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.raising-container .board-section .interaction {
+  position: absolute;
+  bottom: 5%;
+  left: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.raising-container .board-section .interaction img {
+  height: 20vh;
+}
+.raising-container .board-section .interaction img:active {
+  transform: scale(0.9);
+}
+
+.top-left-icons-event {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+.top-left-icons-event .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.top-left-icons-event .icon-button .icon-img {
+  width: 10vh;
+  height: auto;
+  transition: transform 0.2s;
+}
+.top-left-icons-event .icon-button .icon-img:hover {
+  transform: scale(1.1);
+}
+
+.tutorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.tutorial-overlay .tutorial-board {
+  position: relative;
+  text-align: center;
+}
+.tutorial-overlay .tutorial-board .tutorial-background {
+  width: 80vw;
+  max-width: 800px;
+}
+.tutorial-overlay .tutorial-board .tutorial-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  max-width: 700px;
+}
+.tutorial-overlay .tutorial-board .tutorial-prev,
+.tutorial-overlay .tutorial-board .tutorial-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.tutorial-overlay .tutorial-board .tutorial-prev .tutorial-nav,
+.tutorial-overlay .tutorial-board .tutorial-next .tutorial-nav {
+  width: 50px;
+}
+.tutorial-overlay .tutorial-board .tutorial-prev {
+  left: 10%;
+}
+.tutorial-overlay .tutorial-board .tutorial-next {
+  right: 10%;
+}
+.tutorial-overlay .tutorial-board .tutorial-close {
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  background: none;
+  border: none;
+}
+.tutorial-overlay .tutorial-board .tutorial-close img {
+  width: 10vh;
+  height: auto;
+  cursor: pointer;
+}
+.tutorial-overlay .tutorial-board .tutorial-close img:hover {
+  transform: scale(1.05);
+}
+.tutorial-overlay .tutorial-board .tutorial-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #543727;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 60%;
+}
+
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.confirm-modal {
+  background-image: url("/public/images/confirm_backboard.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.confirm-modal p {
+  margin-bottom: 1rem;
+  color: #543727;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.confirm-buttons button {
+  border: none;
+  cursor: pointer;
+}
+.confirm-buttons button img {
+  height: 10vh;
+  width: auto;
+}/*# sourceMappingURL=raisingPage.css.map */

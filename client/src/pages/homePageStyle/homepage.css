@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.animals {
+  margin-left: 10%;
+  background: url("/public/images/loginBackground2.png");
+  background-repeat: no-repeat; /* 不重複 */
+  background-size: contain; /* 或者使用 contain 根據需求 */
+  max-height: 100vh;
+  height: 800px;
+  display: flex;
+  align-items: center; /* 中央對齊 */
+}
+.animals .pattern {
+  justify-content: center;
+  transition: ease 0.1s;
+}
+.animals .pattern .puppy {
+  height: 33.57vh;
+  margin-top: 54.45vh;
+  margin-left: 20vh;
+}
+.animals .pattern .parrot {
+  height: 27.22vh;
+  margin-top: -54.45vh;
+  margin-bottom: 9.074vh;
+  margin-left: 9.074vh;
+}
+.animals .pattern .neko {
+  height: 27.23vh;
+  margin-top: 18.148vh;
+}
+.animals .pattern:hover {
+  transform: scale(1.1);
+}
+.animals .craws {
+  width: 30.52vw;
+  height: 80vh; /* 確保容器高度足夠容納三角形佈局 */
+  position: relative; /* 作為定位參考 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中頂部圖片 */
+}
+.animals .craws .login {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  position: relative; /* 使子元素可以使用絕對定位 */
+  /* 第一張圖片（頂部） */
+  /* 第二張圖片（下方左側） */
+  /* 第三張圖片（下方右側） */
+}
+.animals .craws .login .craw {
+  height: 42vh; /* 頂部圖片保持原始大小 */
+  margin: 0; /* 移除多餘外邊距 */
+}
+.animals .craws .login .google-login-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, 40%); /* 精確居中按鈕圖片 */
+  z-index: 1; /* 確保按鈕在 craw 圖片上方 */
+}
+.animals .craws .login .google-login-button img {
+  width: 80%; /* 按鈕圖片大小相對於 craw 圖片 */
+  height: auto;
+}
+.animals .craws .login:nth-child(1) {
+  bottom: -15vh;
+}
+.animals .craws .login:nth-child(1) .craw1 {
+  height: 42vh; /* 減小下方圖片大小，例如減少到 32vh */
+}
+.animals .craws .login:nth-child(2) {
+  position: absolute;
+  bottom: -5vh;
+  left: 5vh;
+  transform: translateX(-20%); /* 左移形成三角形 */
+}
+.animals .craws .login:nth-child(2) .craw2 {
+  height: 30vh; /* 減小下方圖片大小，例如減少到 32vh */
+}
+.animals .craws .login:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(20%); /* 右移形成三角形 */
+}
+.animals .craws .login:nth-child(3) .craw3 {
+  height: 30vh; /* 減小下方圖片大小，例如減少到 32vh */
+}
+.animals .craws .login:hover {
+  transform: scale(1.1);
+}
+
+.top-left-icons-home {
+  margin-left: 10%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.top-left-icons-home .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.top-left-icons-home .icon-button .icon-img {
+  width: auto;
+  height: 10.875vh;
+  transition: transform 0.2s;
+}
+.top-left-icons-home .icon-button .icon-img:hover {
+  transform: scale(1.1);
+}
+
+.top-right-icons-home {
+  margin-right: 18%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.top-right-icons-home .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.top-right-icons-home .icon-button .icon-img {
+  width: auto;
+  height: 10.875vh;
+  transition: transform 0.2s;
+}
+.top-right-icons-home .icon-button .icon-img:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=homepage.css.map */

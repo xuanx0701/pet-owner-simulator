@@ -1,0 +1,124 @@
+/* 遮罩 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  display: flex; /* 顯示時設置為 flex */
+}
+
+/* 彈出視窗 */
+.modal-panel {
+  display: none; /* 默認不顯示 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 90%;
+  max-width: 60vw;
+  height: 90vh;
+  padding: 20px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  .settingBg {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  .setting-items {
+    margin-top: 18vh;
+    z-index: 1001;
+    .setting-item {
+      z-index: 1001;
+      margin-bottom: 18vh;
+      margin-left: 15vw;
+      display: flex;
+      input[type="range"] {
+        width: 25vw;
+        accent-color: #82573e;
+      }
+      p {
+        margin: 0 1vw;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #82573e;
+      }
+    }
+  }
+
+  /* 按鈕 */
+  .logout-btn {
+    z-index: 1001;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-top: -5vh;
+    &:hover {
+      transform: scale(1.1);
+    }
+    img {
+      width: auto;
+      height: 15vh;
+    }
+  }
+  .close-btn {
+    position: fixed;
+    top: 8%;
+    right: 3%;
+    background-color: transparent;
+    z-index: 1001;
+    margin-top: 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+    img {
+      width: 8vh;
+      height: 8vh;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+// RWD
+@media (max-width: 480px) {
+  .modal-panel {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-panel h2 {
+    font-size: 20px;
+  }
+
+  .setting-item label {
+    font-size: 14px;
+  }
+
+  .logout-btn,
+  .close-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

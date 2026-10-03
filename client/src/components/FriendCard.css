@@ -1,0 +1,56 @@
+.friend-card {
+  display: flex;
+  align-items: center;
+  background: #ffe8c2;
+  border: 4px dashed #b67e5c;
+  border-radius: 12px;
+  /* padding: 10px 15px; */
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  overflow-x: hidden;
+}
+
+.avatar img {
+  width: 15vh;
+  height: 15vh;
+  /* border-radius: 50%; */
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.username {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7a1f2b;
+}
+
+.home-icon img {
+  width: 10vh;
+  margin-right: 2rem;
+}
+.home-icon:hover {
+  transform: scale(1.1);
+}
+.friend-card:hover {
+  background-color: #f0f0f0;
+}
+.friend-card:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+.actions {
+  display: flex;
+}
+.add-friend-button img {
+  width: 7vh;
+  margin-right: 2rem;
+}
+.add-friend-button:hover {
+  transform: scale(1.1);
+}

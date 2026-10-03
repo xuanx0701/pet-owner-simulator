@@ -1,0 +1,169 @@
+.story-review-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.story-review-overlay .story-review-container {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.story-review-overlay .story-review-container img.reviewBg {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  height: 100vh;
+  width: 80vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.story-review-overlay .story-review-container .close-button {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.story-review-overlay .story-review-container .close-button img {
+  width: 3rem;
+  height: auto;
+}
+.story-review-overlay .story-review-container .close-button:hover {
+  transform: scale(1.2);
+}
+.story-review-overlay .story-review-container .story-review-content {
+  display: flex;
+  height: 100%;
+}
+.story-review-overlay .story-review-container .story-review-content .pet-tabs {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+}
+.story-review-overlay .story-review-container .story-review-content .pet-tabs .pet-tab {
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+}
+.story-review-overlay .story-review-container .story-review-content .pet-tabs .pet-tab.active {
+  border: 5px solid #80665c;
+  border-radius: 20px;
+}
+.story-review-overlay .story-review-container .story-review-content .pet-tabs .pet-tab .pet-image {
+  width: auto;
+  height: 7rem;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 50vw;
+  overflow-y: auto;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-list-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll {
+  list-style: none;
+  padding: 0;
+  max-height: 55vh;
+  overflow-y: auto;
+  margin-top: 5%;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll .chapter-item {
+  padding: 10px;
+  margin: 0 0 1.5rem 0;
+  background-color: #fff7e9;
+  border: 3px dashed #c4ab9e;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll .chapter-item:hover {
+  background-color: #e0e0e0;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll .chapter-item .chapter-text {
+  font-size: 2rem;
+  border-right: 5px solid #641627;
+  padding-right: 1rem;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll .chapter-item .chapter-name {
+  font-size: 2rem;
+}
+.story-review-overlay .story-review-container .story-review-content .chapter-list .chapter-scroll .chapter-item p {
+  font-size: 2rem;
+  margin: 0 0 0 1rem;
+  color: #641627;
+}
+
+.pet-image.silhouette {
+  filter: brightness(0);
+}
+
+.pet-image.colored {
+  filter: none;
+}
+
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.confirm-modal {
+  background-image: url("/public/images/confirm_backboard.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.confirm-modal p {
+  margin-bottom: 1rem;
+  color: #543727;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.confirm-buttons button {
+  border: none;
+  cursor: pointer;
+}
+.confirm-buttons button img {
+  height: 10vh;
+  width: auto;
+}/*# sourceMappingURL=storyReview.css.map */

@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.friend-page {
+  margin-left: 10%;
+  background: url("/public/images/curtain-top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.friend-page .friendBoard {
+  margin-left: 10%;
+  background: url("/public/images/friendBoard.png");
+  z-index: 1;
+  width: 90vw;
+  height: 43vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.friend-page .friendBoard .friend-list-container {
+  margin-top: 30vh;
+  margin-left: 10vw;
+  max-width: 40vw;
+}
+.friend-page .friendBoard .friend-list-container .tab-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.friend-page .friendBoard .friend-list-container .tab-section .tab-button {
+  background-color: #dabe9f;
+  color: #a11f2b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background-color 0.3s;
+}
+.friend-page .friendBoard .friend-list-container .tab-section .tab-button:hover {
+  background-color: #f8cf9e;
+}
+.friend-page .friendBoard .friend-list-container .tab-section .tab-button.active {
+  background-color: #f8cf9e;
+  font-weight: bold;
+}
+.friend-page .friendBoard .friend-list-container .search-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.friend-page .friendBoard .friend-list-container .search-section input {
+  padding: 10px;
+  border: 2px solid #a11f2b;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.75rem;
+  flex: 1;
+  margin-right: 10px;
+}
+.friend-page .friendBoard .friend-list-container .search-section input ::-moz-placeholder {
+  color: #ffb6c1;
+}
+.friend-page .friendBoard .friend-list-container .search-section input ::placeholder {
+  color: #ffb6c1;
+}
+.friend-page .friendBoard .friend-list-container .search-section input:focus {
+  border-color: #ff4500;
+  transition: border-color 0.3s;
+}
+.friend-page .friendBoard .friend-list-container .search-section button {
+  background-color: #a11f2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background-color 0.3s;
+  font-size: bold;
+}
+.friend-page .friendBoard .friend-list-container .search-section button:hover {
+  background-color: #ff4500;
+}
+.friend-page .friendBoard .friend-list-container .search-results {
+  margin-bottom: 1.25rem;
+}
+.friend-page .friendBoard .friend-list-container .search-results h3 {
+  color: #a11f2b;
+  margin-bottom: 10px;
+}
+.friend-page .friendBoard .friend-list-container .search-results ul {
+  list-style: none;
+  padding: 0;
+}
+.friend-page .friendBoard .friend-list-container .search-results ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.friend-page .friendBoard .friend-list-container .search-results ul li button {
+  background-color: #a11f2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.friend-page .friendBoard .friend-list-container .search-results ul li button:hover {
+  background-color: #ff4500;
+}
+.friend-page .friendBoard .friend-list-container .search-results .friend-list {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.friend-page .friendBoard .friend-list-container .friend-list {
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.rankBoard {
+  margin-left: 10%;
+  background: url("/public/images/rankBoard.png");
+  z-index: 1;
+  width: 90vw;
+  height: 43vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.rankBoard .friend-list-container {
+  margin-top: 30vh;
+  margin-left: 10vw;
+  max-width: 40vw;
+}
+.rankBoard .friend-list-container .friend-list {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.rankBoard .friend-list-container .friend-list::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.rankBoard .friend-list-container .friend-list::-webkit-scrollbar-track {
+  background: #aaaaaa; /* 背景顏色 */
+  border-radius: 10px; /* 圓角 */
+}
+.rankBoard .friend-list-container .friend-list::-webkit-scrollbar-thumb {
+  background-color: #8f4240;
+  border-radius: 10px; /* 使滑塊成為圓形 */
+  width: 1rem; /* 滑塊的寬度 */
+  height: 1rem; /* 滑塊的高度 */
+}
+.rankBoard .friend-list-container .friend-list .rank-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rankBoard .friend-list-container .friend-list .rank-entry .rank-number {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+.rankBoard .friend-list-container .friend-list .rank-entry .rank-number-img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+}
+
+.top-left-icons-social {
+  margin-left: 10%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.top-left-icons-social .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.top-left-icons-social .icon-button .icon-img {
+  width: 15vh;
+  height: 10.875vh;
+  transition: transform 0.2s;
+}
+.top-left-icons-social .icon-button .icon-img:hover {
+  transform: scale(1.1);
+}
+
+.currnet-rank {
+  position: absolute;
+  right: 15%;
+  top: 20%;
+}
+.currnet-rank img {
+  max-height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.currnet-rank p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #641627;
+}/*# sourceMappingURL=SocialHubPage.css.map */

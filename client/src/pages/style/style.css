@@ -1,0 +1,83 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.animals {
+  margin-left: 10%;
+  background: url("/public/images/loginBackground2.png");
+  background-repeat: no-repeat; /* 不重複 */
+  background-size: contain; /* 或者使用 contain 根據需求 */
+  max-height: 100vh;
+  height: 800px;
+  display: flex;
+  align-items: center; /* 中央對齊 */
+}
+.animals .pattern {
+  justify-content: center;
+  transition: ease 0.1s;
+}
+.animals .pattern .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.animals .pattern .login .craw {
+  height: 54.45vh;
+  margin-top: 36.297vh;
+}
+.animals .pattern .login .google-login-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, 125%);
+}
+.animals .pattern .puppy {
+  height: 33.57vh;
+  margin-top: 54.45vh;
+}
+.animals .pattern .parrot {
+  height: 27.22vh;
+  margin-top: -54.45vh;
+  margin-bottom: 9.074vh;
+  margin-left: 9.074vh;
+}
+.animals .pattern .neko {
+  height: 27.23vh;
+  margin-top: 18.148vh;
+}
+.animals .pattern:hover {
+  transform: scale(1.1);
+}
+
+.top-left-icons {
+  margin-left: 10%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+.top-left-icons .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.top-left-icons .icon-button .icon-img {
+  width: 10.875vh;
+  height: 10.875vh;
+  transition: transform 0.2s;
+}
+.top-left-icons .icon-button .icon-img:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

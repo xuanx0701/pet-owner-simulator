@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.bulletin-container {
+  margin-left: 10%;
+  background: url("/public/images/curtain-top.png");
+  background-repeat: no-repeat; /* 不重複 */
+  background-size: contain; /* 或者使用 contain 根據需求 */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bulletin {
+    margin-left: 10%;
+    background: url("/public/images/catBoard.png");
+    z-index: 1;
+    width: 90vw;
+    height: 43vw;
+    background-repeat: no-repeat; /* 不重複 */
+    background-size: contain; /* 或者使用 contain 根據需求 */
+    position: relative;
+    // overflow: auto;
+    .scroll-container {
+      max-height: 55vh; /* 設置最大高度以控制滾動 */
+      overflow-y: auto; /* 允許垂直滾動 */
+      position: absolute;
+      top: 32%;
+      left: 10%;
+      width: 50vw;
+    }
+    // .team {
+    //   background: #dabe9f;
+    //   border: 3px dashed #b67e5c;
+    //   border-radius: 10px;
+    //   position: absolute;
+    //   top: 32%;
+    //   left: 10%;
+    //   width: 50vw;
+    //   height: auto;
+    //   overflow-y: auto;
+    //   .text {
+    //     font-size: 1.25rem;
+    //     margin-left: 2rem;
+    //     font-weight: bold;
+    //     color: #641627;
+    //   }
+    // }
+    // h3 {
+    //   font-size: 2.5rem;
+    //   margin-top: 1rem;
+    //   margin-left: 1rem;
+    //   color: #641627;
+    //   font-weight: bold;
+    // }
+    // .idea {
+    //   background: #dabe9f;
+    //   border: 3px dashed #b67e5c;
+    //   border-radius: 10px;
+    //   position: absolute;
+    //   top: 55%;
+    //   left: 10%;
+    //   width: 50vw;
+    //   height: 15vw;
+    //   max-height: 15vw;
+    //   overflow-y: auto;
+    //   .text {
+    //     font-size: 1.25rem;
+    //     margin-left: 2rem;
+    //     margin-right: 1rem;
+    //     font-weight: bold;
+    //     color: #641627;
+    //   }
+    // }
+    .team,
+    .idea {
+      background: #dabe9f;
+      border: 3px dashed #b67e5c;
+      border-radius: 10px;
+      margin-bottom: 1rem; /* 增加間距 */
+      padding: 1rem; /* 增加內邊距 */
+    }
+
+    .text {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #641627;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      color: #641627;
+      font-weight: bold;
+    }
+  }
+}
+.element::-webkit-scrollbar {
+  width: 12px; /* 滾動條寬度 */
+}
+
+.element::-webkit-scrollbar-thumb {
+  background-color: #8f4240; /* 滾動條顏色 */
+  border-radius: 10px; /* 圓角 */
+}
+
+.element::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 滾動條背景 */
+}
+.top-left-icons-bulletin {
+  margin-left: 10%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    .icon-img {
+      width: auto;
+      height: 10.875vh;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+/* src/pages/petSelection.css */
+.pet-selection-container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pet-selection-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pet-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.pet-option {
+  width: 220px;
+  padding: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  background-color: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pet-option:hover {
+  transform: scale(1.05);
+  border-color: #4caf50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pet-option img {
+  width: 100%;
+  height: 25vh;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.pet-option p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .pet-selection-container {
+    padding: 1rem;
+  }
+
+  .pet-selection-container h1 {
+    font-size: 2rem;
+  }
+
+  .pet-option {
+    width: 180px;
+    padding: 1rem;
+  }
+
+  .pet-option img {
+    height: 20vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .pet-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pet-option {
+    width: 90%;
+    max-width: 200px;
+  }
+}
